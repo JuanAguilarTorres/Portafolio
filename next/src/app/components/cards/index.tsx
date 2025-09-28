@@ -1,4 +1,4 @@
-// Cards 
+// Cards
 // Main body component.
 'use client';
 import React, { useState, useEffect } from 'react';
@@ -24,6 +24,7 @@ const CardSection: React.FC = () => {
   const [infocards, setInfocards] = useState<infocard[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   useEffect(() => {
     const loadInfocards = async () => {
@@ -40,7 +41,7 @@ const CardSection: React.FC = () => {
         setLoading(false);
       }
     };
-
+    
     loadInfocards();
   }, []);
 
@@ -71,6 +72,9 @@ const CardSection: React.FC = () => {
             tags={card.tags}
             links={card.links}
             image={card.image}
+            isHovered={hoveredCard === card.id}
+            isOtherHovered={hoveredCard !== null && hoveredCard !== card.id}
+            onHoverChange={(isHovered) => setHoveredCard(isHovered ? card.id : null)}
           />
         ))}
       </div>
