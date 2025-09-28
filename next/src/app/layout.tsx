@@ -1,7 +1,9 @@
+// Main Layout
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
+import { GlowWrapper } from "@/components/glow";
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -34,10 +36,9 @@ export default function RootLayout({
                     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between">
                         <Sidebar />
                     </div>
-
-                    <main className="pt-12 lg:flex-1">
+                    <GlowWrapper>
                         {children}
-                    </main>
+                    </GlowWrapper>
                 </div>
             </body>
         </html>
