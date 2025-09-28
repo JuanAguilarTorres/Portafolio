@@ -1,3 +1,5 @@
+// Sidebar
+// Header Title component.
 import React from 'react';
 
 export const SidebarHeader: React.FC = () => {
