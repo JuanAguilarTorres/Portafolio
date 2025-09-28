@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const roboto = Roboto({
+    variable: "--font-roboto",
     subsets: ["latin"],
+    weight: ["100", "300", "400", "500", "700", "900"]
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+    variable: "--font-roboto-mono",
     subsets: ["latin"],
+    weight: ["100", "300", "400", "500", "700"]
 });
 
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-800`}
+                className={`${roboto.variable} ${robotoMono.variable} antialiased bg-slate-800`}
             >
                 <div className="lg:flex lg:justify-between lg:gap-4">
                     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
