@@ -34,11 +34,11 @@ export const SidebarNav: React.FC = () => {
                             onClick={() => handleNavClick(item)}
                             className={`group flex items-center text-xs font-bold tracking-widest transition-all duration-300 py-3 px-2 -my-3 -mx-2 ${activeSection === item.id
                                     ? 'text-white'
-                                    : 'text-slate-500 hover:text-white'
+                                    : 'text-stone-400 hover:text-white'
                                 }`}
                         >
                             <span
-                                className={`h-px bg-slate-600 transition-all duration-300 mr-4 ${activeSection === item.id
+                                className={`h-px bg-stone-500 transition-all duration-300 mr-4 ${activeSection === item.id
                                         ? 'w-16 bg-white'
                                         : 'w-8 group-hover:w-16 group-hover:bg-white'
                                     }`}

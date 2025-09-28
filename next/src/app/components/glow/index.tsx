@@ -86,7 +86,7 @@ export function GlowWrapper({ children }: GlowWrapperProps) {
             className="lg:flex-1 relative overflow-hidden lg:-ml-4 lg:pl-4"
             style={{
                 background: glowOpacity > 0
-                    ? `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, ${0.1 * glowOpacity}), transparent 80%)`
+                    ? `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(76, 76, 76, ${0.05 * glowOpacity}), transparent 80%)`
                     : 'transparent'
             }}
         >
