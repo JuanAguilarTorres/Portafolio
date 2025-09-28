@@ -1,0 +1,25 @@
+{
+  "infocards": [
+    {
+      "id": "project01",
+      "title": "project 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum semper dolor, ac convallis tellus venenatis et.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
+      "links": {
+        "github": "https://github.com"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/250px-Image_created_with_a_mobile_phone.png"
+    },
+    {
+      "id": "project02",
+      "title": "project 2: abc",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum semper dolor, ac convallis tellus venenatis et.",
+      "tags": ["C++", "Java", "Github"],
+      "links": {
+        "github": "https://github.com",
+        "website": "https://google.com"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/250px-Image_created_with_a_mobile_phone.png"
+    }
+  ]
+}
