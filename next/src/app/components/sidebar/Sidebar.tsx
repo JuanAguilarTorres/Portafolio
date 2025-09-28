@@ -13,7 +13,7 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
     return (
-        <aside className={`bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white 
+        <aside className={`bg-gradient-to-br from-stone-800 via-stone-700 to-stone-800 text-white 
                           h-auto lg:min-h-screen w-full lg:w-120 
                           flex flex-col ${className}`}>
             <div className="flex flex-col justify-between h-full py-4 lg:py-8 mt-6 lg:mt-0">

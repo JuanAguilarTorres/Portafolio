@@ -1,7 +1,9 @@
+// Main Layout
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
+import { GlowWrapper } from "@/components/glow";
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -16,8 +18,8 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "To add",
-    description: "To add",
+    title: "Juan Aguilar | Portfolio",
+    description: "Juan Aguilar's portfolio",
 };
 
 export default function RootLayout({
@@ -30,14 +32,13 @@ export default function RootLayout({
             <body
                 className={`${roboto.variable} ${robotoMono.variable} antialiased bg-slate-800`}
             >
-                <div className="lg:flex lg:justify-between lg:gap-4">
-                    <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between">
+                <div className="lg:flex lg:gap-4">
+                    <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between">
                         <Sidebar />
                     </div>
-
-                    <main className="pt-24 lg:w-1/2 lg:py-24">
+                    <GlowWrapper>
                         {children}
-                    </main>
+                    </GlowWrapper>
                 </div>
             </body>
         </html>
