@@ -13,15 +13,16 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
     return (
-        <aside className={`bg-slate-900 text-white min-h-screen w-80 flex flex-col ${className}`}>
-            <div className="p-8 flex-1">
-                <div className="p-8 flex-1">
+        <aside className={`bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white 
+                          h-auto lg:min-h-screen w-full lg:w-120 
+                          flex flex-col ${className}`}>
+            <div className="flex flex-col justify-between h-full py-4 lg:py-8">
+                <div className="flex-1 flex flex-col justify-center px-4 lg:px-8">
                     <SidebarHeader />
                     <SidebarNav/>
                 </div>
-
-                <div className="p-8 pt-0">
-                    <SidebarSocial/>
+                <div className="px-4 lg:px-8">
+                    <SidebarSocial />
                 </div>
             </div>
         </aside>

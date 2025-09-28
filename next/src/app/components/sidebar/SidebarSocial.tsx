@@ -10,8 +10,8 @@ interface SocialLink {
 }
 
 const socialLinks: SocialLink[] = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' }
+    { icon: Github, href: 'https://github.com/JuanAguilarTorres', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/juan-carlos-aguilar-torres-929236387', label: 'LinkedIn' }
 ];
 
 export const SidebarSocial: React.FC = () => {
@@ -25,7 +25,7 @@ export const SidebarSocial: React.FC = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-400 hover:text-white transition-colors duration-300"
+                        className="text-slate-300 hover:text-white transition-colors duration-300"
                         aria-label={link.label}
                     >
                         <IconComponent size={20} />

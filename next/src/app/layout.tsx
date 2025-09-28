@@ -31,7 +31,7 @@ export default function RootLayout({
                 className={`${roboto.variable} ${robotoMono.variable} antialiased bg-slate-800`}
             >
                 <div className="lg:flex lg:justify-between lg:gap-4">
-                    <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+                    <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between">
                         <Sidebar />
                     </div>
 
