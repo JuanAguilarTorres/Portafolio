@@ -35,15 +35,21 @@ export default function Home() {
                     malesuada placerat leo blandit, <span className="font-bold text-white">porttitor vestibulum</span> ligula. Curabitur auctor pharetra tortor.
                 </p>
             </section>
-
             <section>
-                <h2 className="text-2xl font-bold mb-4">Projects</h2>
-                    <CardSection />
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent to-slate-300"></div>
+                    <h2 className="text-2xl font-bold">Projects</h2>
+                    <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-slate-300"></div>
+                </div>
+                <CardSection />
             </section>
 
-            
             <section>
-                <h2 className="text-2xl font-bold mb-4">Contact</h2>
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent to-slate-300"></div>
+                    <h2 className="text-2xl font-bold">Contact</h2>
+                    <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-slate-300"></div>
+                </div>
                 <div className="text-slate-400">
                     <ContactList />
                 </div>
