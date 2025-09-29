@@ -32,27 +32,43 @@ export const SidebarNav: React.FC = () => {
         }
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const sections = navItems.map(item => ({
-                id: item.id,
-                element: document.querySelector(item.href)
-            }));
+useEffect(() => {
+    const handleScroll = () => {
+        const sections = navItems.map(item => ({
+            id: item.id,
+            element: document.querySelector(item.href)
+        }));
 
-            const currentSection = sections.find(section => {
-                if (!section.element) return false;
-                const rect = section.element.getBoundingClientRect();
-                return rect.top <= 100 && rect.bottom >= 100;
-            });
+        const isNearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+        
+        if (isNearBottom) {
+            setActiveSection(navItems[navItems.length - 1].id);
+            return;
+        }
 
-            if (currentSection) {
-                setActiveSection(currentSection.id);
+        let closestSection = sections[0];
+        let closestDistance = Infinity;
+
+        sections.forEach(section => {
+            if (!section.element) return;
+            const rect = section.element.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+            
+            if (rect.top <= 150 && distance < closestDistance) {
+                closestDistance = distance;
+                closestSection = section;
             }
-        };
+        });
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        if (closestSection) {
+            setActiveSection(closestSection.id);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
     useEffect(() => {
         if (window.location.hash) {
