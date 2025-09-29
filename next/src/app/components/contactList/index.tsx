@@ -8,10 +8,10 @@ interface SocialLink {
 }
 
 const socialLinks: SocialLink[] = [
-    { icon: Github, href: 'https://github.com/JuanAguilarTorres', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/juan-carlos-aguilar-torres-929236387', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:juancarlos.agtorres@gmail.com', label: 'Mail' },
-    { icon: FileText, href: '/TODO', label: 'CV' }
+    { icon: FileText, href: '/TODO', label: 'CV' },
+    { icon: Github, href: 'https://github.com/JuanAguilarTorres', label: 'GitHub' }
 ];
 
 export default function ContactList() {
