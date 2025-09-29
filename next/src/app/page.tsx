@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import CardSection from '@/app/components/cards';
+import ContactList from '@/app/components/contactList';
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -44,7 +45,7 @@ export default function Home() {
             <section>
                 <h2 className="text-2xl font-bold mb-4">Contact</h2>
                 <div className="text-slate-400">
-                    Content
+                    <ContactList />
                 </div>
             </section>
         </div>

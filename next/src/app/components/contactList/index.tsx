@@ -1,5 +1,3 @@
-// Sidebar
-// Social Links component.
 import React from 'react';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 
@@ -16,9 +14,9 @@ const socialLinks: SocialLink[] = [
     { icon: FileText, href: '/TODO', label: 'CV' }
 ];
 
-export const SidebarSocial: React.FC = () => {
+export default function ContactList() {
     return (
-        <div className="flex space-x-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
             {socialLinks.map((link, index) => {
                 const IconComponent = link.icon;
                 return (
@@ -27,13 +25,14 @@ export const SidebarSocial: React.FC = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-300 hover:text-white transition-colors duration-300"
+                        className="flex flex-col items-center gap-3 text-slate-300 hover:text-white transition-colors duration-300 group"
                         aria-label={link.label}
                     >
-                        <IconComponent size={20} />
+                        <IconComponent size={48} className="group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-sm font-medium">{link.label}</span>
                     </a>
                 );
             })}
         </div>
     );
-};
+}
