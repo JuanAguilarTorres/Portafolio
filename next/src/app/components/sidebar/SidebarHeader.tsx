@@ -2,6 +2,12 @@
 // Header Title component.
 import React from 'react';
 
+/**
+ * Sidebar component.
+ * 
+ * Displays the header or profile section.
+ * Includes the name, title, and a brief description.
+ */
 export const SidebarHeader: React.FC = () => {
     return (
         <header className="mb-12">

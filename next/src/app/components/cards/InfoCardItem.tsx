@@ -3,6 +3,17 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
+/**
+ * Props for the InfoCard component.
+ * @property title - The card's title.
+ * @property description - Description or summary of the project/item.
+ * @property tags - Array of tags/technologies associated with the card.
+ * @property links - Object containing optional GitHub and website URLs.
+ * @property image - Optional image URL for the card.
+ * @property isHovered - Whether this card is currently hovered.
+ * @property isOtherHovered - Whether another card is hovered (for dimming effect).
+ * @property onHoverChange - Callback for hover state changes.
+ */
 interface InfoCardProps {
   title: string;
   description: string;
@@ -17,6 +28,24 @@ interface InfoCardProps {
   onHoverChange?: (isHovered: boolean) => void;
 }
 
+/**
+ * InfoCard component.
+ * 
+ * Renders a project or item card with:
+ * - Optional image preview.
+ * - Title, description, and tags.
+ * - GitHub and Website links with icons.
+ * - Animated hover and dimming effects.
+ * 
+ * @param title - The card's title.
+ * @param description - Description or summary.
+ * @param tags - Array of tags/technologies.
+ * @param links - GitHub and/or website URLs.
+ * @param image - Optional image URL.
+ * @param isHovered - If this card is hovered.
+ * @param isOtherHovered - If another card is hovered.
+ * @param onHoverChange - Callback for hover state changes.
+ */
 const InfoCard: React.FC<InfoCardProps> = ({
   title,
   description,
@@ -27,10 +56,16 @@ const InfoCard: React.FC<InfoCardProps> = ({
   isOtherHovered = false,
   onHoverChange
 }) => {
+  /**
+   * Handles mouse enter event to trigger hover state.
+   */
   const handleMouseEnter = () => {
     onHoverChange?.(true);
   };
 
+  /**
+   * Handles mouse leave event to reset hover state.
+   */
   const handleMouseLeave = () => {
     onHoverChange?.(false);
   };
@@ -57,6 +92,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
           : 'none'
       }}
     >
+      {/* Image preview */}
       {image && (
         <div className="mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-stone-400/20 to-blue-400/20 p-3">
           <div className="bg-stone-900/50 rounded-md p-2">
@@ -65,7 +101,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
               alt={title}
               className="w-full h-32 object-cover rounded transition-transform duration-500 group-hover:scale-105"
               onError={(e) => {
-                // Hide image
+                // Hide image if it fails to load
                 e.currentTarget.style.display = 'none';
               }}
             />
@@ -73,6 +109,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
         </div>
       )}
      
+      {/* Title */}
       <div className="mb-3">
         <h3 className={`
           text-xl font-bold transition-all duration-300
@@ -85,6 +122,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
         </h3>
       </div>
      
+      {/* Description */}
       <p className={`
         mb-4 leading-relaxed transition-all duration-300
         ${isHovered 
@@ -95,6 +133,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
         {description}
       </p>
      
+      {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-4">
         {tags.map((tag, index) => (
           <span
@@ -112,6 +151,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
         ))}
       </div>
      
+      {/* Links */}
       <div className="flex gap-3">
         {links.github && (
           <a
