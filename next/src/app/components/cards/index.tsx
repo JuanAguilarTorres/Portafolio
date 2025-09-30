@@ -1,8 +1,9 @@
 // Cards
 // Main body component.
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import InfoCard from './InfoCardItem';
+import infoData from './data/info.json'
 
 interface infocard {
   id: string;
@@ -16,55 +17,13 @@ interface infocard {
   image?: string;
 }
 
-interface InfoCardData {
-  infocards: infocard[];
-}
-
 const CardSection: React.FC = () => {
-  const [infocards, setInfocards] = useState<infocard[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadInfocards = async () => {
-      try {
-        const response = await fetch('/info.json');
-        if (!response.ok) {
-          throw new Error('Failed to load cards.');
-        }
-        const data: InfoCardData = await response.json();
-        setInfocards(data.infocards);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred');
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    loadInfocards();
-  }, []);
-
-  if (loading) {
-    return (
-      <section className="py-8">
-        <div className="text-stone-400">Loading...</div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className="py-8">
-        <div className="text-red-400">Error: {error}</div>
-      </section>
-    );
-  }
 
   return (
     <section className="py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {infocards.map((card) => (
+        {infoData.infocards.map((card: infocard) => (
           <InfoCard
             key={card.id}
             title={card.title}

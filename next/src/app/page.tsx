@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import CardSection from '@/app/components/cards';
+import ContactList from '@/app/components/contactList';
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -19,7 +20,7 @@ const robotoMono = Roboto_Mono({
 export default function Home() {
     return (
         <div className={`${roboto.variable} ${robotoMono.variable} grid items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 max-w-4xl mx-auto`}>
-            <section className="space-y-6">
+            <section id="about" className="space-y-6">
                 <p className="text-slate-400 leading-relaxed">
                     Lorem ipsum <span className="font-bold text-white">dolor sit</span> amet, consectetur adipiscing elit. Etiam commodo orci et odio iaculis,
                     in lacinia arcu <span className="font-bold text-white">elementum</span>. Morbi quam libero, mattis non ipsum vitae, fermentum maximus quam.
@@ -34,17 +35,22 @@ export default function Home() {
                     malesuada placerat leo blandit, <span className="font-bold text-white">porttitor vestibulum</span> ligula. Curabitur auctor pharetra tortor.
                 </p>
             </section>
-
-            <section>
-                <h2 className="text-2xl font-bold mb-4">Projects</h2>
-                    <CardSection />
+            <section id="projects">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent to-slate-300"></div>
+                    <h2 className="text-2xl font-bold">Projects</h2>
+                    <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-slate-300"></div>
+                </div>
+                <CardSection />
             </section>
-
-            
-            <section>
-                <h2 className="text-2xl font-bold mb-4">Contact</h2>
+            <section id="contact">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent to-slate-300"></div>
+                    <h2 className="text-2xl font-bold">Contact</h2>
+                    <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent to-slate-300"></div>
+                </div>
                 <div className="text-slate-400">
-                    Content
+                    <ContactList />
                 </div>
             </section>
         </div>
