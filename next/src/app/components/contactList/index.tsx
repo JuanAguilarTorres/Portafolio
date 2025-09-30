@@ -8,7 +8,7 @@ interface SocialLink {
 }
 
 const socialLinks: SocialLink[] = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/juan-carlos-aguilar-torres-929236387', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/juan-carlos-aguilar-torres/', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:juancarlos.agtorres@gmail.com', label: 'Mail' },
     { icon: FileText, href: '/TODO', label: 'CV' },
     { icon: Github, href: 'https://github.com/JuanAguilarTorres', label: 'GitHub' }
@@ -16,7 +16,7 @@ const socialLinks: SocialLink[] = [
 
 export default function ContactList() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
             {socialLinks.map((link, index) => {
                 const IconComponent = link.icon;
                 return (
