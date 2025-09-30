@@ -18,7 +18,7 @@ export const SidebarHeader: React.FC = () => {
                 Aguilar Torres
             </h1>
             <h2 className="text-lg text-stone-300 mb-4">Software Engineer</h2>
-            <p className="text-stone-400 text-s leading-relaxed">
+            <p className="text-stone-300 text-s leading-relaxed">
                 I develop reliable, maintainable software through clean code and solid engineering principles.
             </p>
         </header>

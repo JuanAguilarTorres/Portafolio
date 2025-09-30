@@ -121,7 +121,7 @@ export const SidebarNav: React.FC = () => {
                             className={`group flex items-center text-xs font-bold tracking-widest transition-all duration-300 py-3 px-2 -my-3 -mx-2 ${
                                 activeSection === item.id
                                     ? 'text-white'
-                                    : 'text-stone-400 hover:text-white'
+                                    : 'text-stone-300 hover:text-white'
                             }`}
                         >
                             <span
