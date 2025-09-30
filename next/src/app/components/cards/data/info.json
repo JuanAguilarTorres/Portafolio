@@ -3,7 +3,7 @@
     {
       "id": "02",
       "title": "Multimedia Engine",
-      "description": "Flexible multimedia engine that bridges the power of C++ with the simplicity of Lua scripting. Built on top of SDL2",
+      "description": "Flexible multimedia engine that bridges the power of C++ with the simplicity of Lua scripting. Built on top of SDL2.",
       "tags": ["C++", "SDL2", "ECS"],
       "links": {
         "github": "https://github.com/JuanAguilarTorres/SimpleEntEngine"
