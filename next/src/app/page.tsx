@@ -1,5 +1,4 @@
 // Index page
-import Image from "next/image";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import CardSection from '@/app/components/cards';
@@ -39,19 +38,19 @@ export default function Home() {
             {/* About Section */}
             <section id="about" className="space-y-6">
                 <p className="text-slate-400 leading-relaxed">
-                    I'm a software engineer graduated from <span className="font-bold text-white">Universidad de Costa Rica</span> with a passion for building thoughtful, 
+                    I&apos;m a software engineer graduated from <span className="font-bold text-white">Universidad de Costa Rica</span> with a passion for building thoughtful, 
                     well-crafted solutions. My approach to development centers on writing <span className="font-bold text-white">clean, maintainable code</span>, because 
-                    I'm a firm believer in SOLID principles, DRY, and KISS, not as buzzwords, but as guiding philosophies that lead to modular, scalable systems.
+                    I&apos;m a firm believer in SOLID principles, DRY, and KISS, not as buzzwords, but as guiding philosophies that lead to modular, scalable systems.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
-                    I've explored a variety of programming languages throughout my learning journey, gaining exposure to both low-level and high-level. Through projects 
+                    I&apos;ve explored a variety of programming languages throughout my learning journey, gaining exposure to both low-level and high-level. Through projects 
                     involving languages such as <span className="font-bold text-white">C, C++, C#, Python, Java</span>, and frameworks such 
                     as <span className="font-bold text-white">Next.js</span>, which has allowed me to build a broad foundation and adapt to different 
                     approaches in software development.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
-                    I've embraced <span className="font-bold text-white">Test-Driven Development</span> and design patterns as tools for confidence, and 
-                    I'm comfortable navigating both <span className="font-bold text-white">Scrum</span> environments with Jira or ClickUp and more dynamic 
+                    I&apos;ve embraced <span className="font-bold text-white">Test-Driven Development</span> and design patterns as tools for confidence, and 
+                    I&apos;m comfortable navigating both <span className="font-bold text-white">Scrum</span> environments with Jira or ClickUp and more dynamic 
                     approaches like Extreme Programming.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
