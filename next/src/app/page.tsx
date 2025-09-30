@@ -22,17 +22,23 @@ export default function Home() {
         <div className={`${roboto.variable} ${robotoMono.variable} grid items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 max-w-4xl mx-auto`}>
             <section id="about" className="space-y-6">
                 <p className="text-slate-400 leading-relaxed">
-                    Lorem ipsum <span className="font-bold text-white">dolor sit</span> amet, consectetur adipiscing elit. Etiam commodo orci et odio iaculis,
-                    in lacinia arcu <span className="font-bold text-white">elementum</span>. Morbi quam libero, mattis non ipsum vitae, fermentum maximus quam.
+                    I'm a software engineer graduated from <span className="font-bold text-white">Universidad de Costa Rica</span> with a passion for building thoughtful, 
+                    well-crafted solutions. My approach to development centers on writing <span className="font-bold text-white">clean, maintainable code</span>, because 
+                    I'm a firm believer in SOLID principles, DRY, and KISS, not as buzzwords, but as guiding philosophies that lead to modular, scalable systems.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
-                    Aliquam hendrerit <span className="font-bold text-white">augue ac</span> porta malesuada. In suscipit risus ac metus pretium euismod. Nulla ac
-                    efficitur augue, eu malesuada metus. Nam ac lorem in magna elementum porta. Praesent <span className="font-bold text-white">facilisis</span> ac
-                    sapien ac magna commodo, sed sodales leo auctor. In cursus eros non dolor placerat elementum.
+                    I've explored a variety of programming languages throughout my learning journey, gaining exposure to both low-level and high-level. Through projects 
+                    involving languages such as <span className="font-bold text-white">C, C++, C#, Python, Java</span>, and frameworks such 
+                    as <span className="font-bold text-white">Next.js</span>, which has allowed me to build a broad foundation and adapt to different 
+                    approaches in software development.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
-                    Aenean in <span className="font-bold text-white">ornare risus</span>. Integer nec venenatis enim, faucibus dignissim sapien. Proin nunc lectus,
-                    malesuada placerat leo blandit, <span className="font-bold text-white">porttitor vestibulum</span> ligula. Curabitur auctor pharetra tortor.
+                    I've embraced <span className="font-bold text-white">Test-Driven Development</span> and design patterns as tools for confidence, and 
+                    I'm comfortable navigating both <span className="font-bold text-white">Scrum</span> environments with Jira or ClickUp and more dynamic 
+                    approaches like Extreme Programming.
+                </p>
+                <p className="text-slate-400 leading-relaxed">
+                    In my free time, I enjoy artistic hobbies such as composing music, drawing, and 3D modeling, finding new ways to keep myself curious and engaged.
                 </p>
             </section>
             <section id="projects">
