@@ -1,25 +1,25 @@
 {
   "infocards": [
     {
-      "id": "project01",
-      "title": "project 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum semper dolor, ac convallis tellus venenatis et.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
+      "id": "02",
+      "title": "Multimedia Engine",
+      "description": "Flexible multimedia engine that bridges the power of C++ with the simplicity of Lua scripting. Built on top of SDL2",
+      "tags": ["C++", "SDL2", "ECS"],
       "links": {
-        "github": "https://github.com"
+        "github": "https://github.com/JuanAguilarTorres/SimpleEntEngine"
       },
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/250px-Image_created_with_a_mobile_phone.png"
+      "image": "/images/pj02.png"
     },
     {
-      "id": "project02",
-      "title": "project 2: abc",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum semper dolor, ac convallis tellus venenatis et.",
-      "tags": ["C++", "Java", "Github"],
+      "id": "01",
+      "title": "Personal Portfolio",
+      "description": "Next.js-based portfolio website, showcasing my projects, skills, and professional background as a Software Engineer.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
       "links": {
-        "github": "https://github.com",
-        "website": "https://google.com"
+        "github": "https://github.com/JuanAguilarTorres/Portafolio",
+        "website": "TODO"
       },
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/250px-Image_created_with_a_mobile_phone.png"
+      "image": "https://images.prismic.io/techloset/Z1_3cpbqstJ98iN__a-complete-guide-to-next-js-a-react-js-framework.webp?auto=format%2Ccompress&fit=max&w=3840"
     }
   ]
 }
