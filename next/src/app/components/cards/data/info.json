@@ -16,8 +16,7 @@
       "description": "Next.js-based portfolio website, showcasing my projects, skills, and professional background as a Software Engineer.",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
       "links": {
-        "github": "https://github.com/JuanAguilarTorres/Portafolio",
-        "website": "TODO"
+        "github": "https://github.com/JuanAguilarTorres/Portafolio"
       },
       "image": "https://images.prismic.io/techloset/Z1_3cpbqstJ98iN__a-complete-guide-to-next-js-a-react-js-framework.webp?auto=format%2Ccompress&fit=max&w=3840"
     }
