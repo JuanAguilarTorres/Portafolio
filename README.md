@@ -7,11 +7,11 @@ This repository contains my **Next.js-based portfolio website**, showcasing my p
 ## Features
 
 - **Next.js Framework**: Built with Next.js for fast, modern web performance.
-- **Firebase Hosting**: Hosted on Firebase for reliable, global access.
-- **GitHub Actions CI/CD**: Automatic deployment on push to `main`.
+- **Vercel Hosting**: Deployed on Vercel for fast, reliable access.
+- **Automatic Deployments**: Instant preview and production deployments on push to `main`.
 - **Static Export**: Uses Next.js static export for a lightweight, performant site.
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
-- **Clean Code Structure**: Organized `pages`, `components`, and `styles` for easy maintenance.
+- **Clean Code Structure**: Organized for easy maintenance.
 
 ---
 
@@ -19,10 +19,8 @@ This repository contains my **Next.js-based portfolio website**, showcasing my p
 
 - **Frontend**: Next.js, React
 - **Styling**: Tailwind CSS / CSS Modules
-- **Hosting**: Firebase Hosting
-- **CI/CD**: GitHub Actions
+- **Hosting**: Vercel
 - **Version Control**: Git & GitHub
-
 ---
 
 ## Development
@@ -39,12 +37,6 @@ Build and export for production:
 
 ```bash
 npm run build
-```
-
-Deploy to Firebase:
-
-```bash
-firebase deploy
 ```
 
 ## Acknowledgments
