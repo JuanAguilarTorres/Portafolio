@@ -2,10 +2,26 @@
 'use client';
 import { useState, useEffect, ReactNode, useRef } from 'react';
 
+/**
+ * Props for the GlowWrapper component.
+ * @property children - The content to be rendered inside the wrapper.
+ */
 interface GlowWrapperProps {
     children: ReactNode;
 }
 
+/**
+ * GlowWrapper component.
+ * 
+ * Wraps its children with a mouse-following radial glow effect.
+ * The glow appears when the mouse enters the main area and fades out smoothly on mouse leave.
+ * 
+ * - Tracks mouse position relative to the main element.
+ * - Handles fade-in and fade-out of the glow using requestAnimationFrame.
+ * - Cleans up event listeners and animation frames on unmount.
+ * 
+ * @param children - React nodes to render inside the glowing main area.
+ */
 export function GlowWrapper({ children }: GlowWrapperProps) {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isMouseInside, setIsMouseInside] = useState(false);
@@ -13,6 +29,9 @@ export function GlowWrapper({ children }: GlowWrapperProps) {
     const fadeAnimationRef = useRef<number | null>(null);
 
     useEffect(() => {
+        /**
+         * Handles mouse movement and updates the glow position.
+         */
         const handleMouseMove = (e: MouseEvent) => {
             const mainElement = e.currentTarget as HTMLElement;
             const rect = mainElement.getBoundingClientRect();
@@ -21,21 +40,27 @@ export function GlowWrapper({ children }: GlowWrapperProps) {
             setMousePosition({ x, y });
         };
 
+        /**
+         * Handles mouse entering the main area, shows the glow.
+         */
         const handleMouseEnter = () => {
             setIsMouseInside(true);
             setGlowOpacity(1);
 
-            // This is to cancel any ongoing fade animation.
+            // Cancel any ongoing fade animation.
             if (fadeAnimationRef.current) {
                 cancelAnimationFrame(fadeAnimationRef.current);
                 fadeAnimationRef.current = null;
             }
         };
 
+        /**
+         * Handles mouse leaving the main area, fades out the glow.
+         */
         const handleMouseLeave = () => {
             setIsMouseInside(false);
 
-            // Start fade out to remove the glow (mouse leave).
+            // Start fade out animation.
             let opacity = 1;
             const fadeOut = () => {
                 opacity -= 0.05;
@@ -61,7 +86,7 @@ export function GlowWrapper({ children }: GlowWrapperProps) {
                 mainElement.removeEventListener('mouseenter', handleMouseEnter);
                 mainElement.removeEventListener('mouseleave', handleMouseLeave);
 
-                // Clean up.
+                // Clean up any ongoing fade animation.
                 if (fadeAnimationRef.current) {
                     cancelAnimationFrame(fadeAnimationRef.current);
                 }

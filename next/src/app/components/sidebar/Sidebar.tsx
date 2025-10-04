@@ -7,10 +7,26 @@ import { SidebarHeader } from './SidebarHeader';
 import { SidebarNav } from './SidebarNav';
 import { SidebarSocial } from './SidebarSocial';
 
+/**
+ * Props for the Sidebar component.
+ * @property className - Optional additional CSS classes for styling.
+ */
 interface SidebarProps {
     className?: string;
 }
 
+/**
+ * Sidebar component.
+ * 
+ * Renders the main sidebar layout, including:
+ * - SidebarHeader: Displays the header or profile section.
+ * - SidebarNav: Navigation links for the site.
+ * - SidebarSocial: Social media/contact icons.
+ * 
+ * The sidebar uses a vertical gradient background and is responsive for different screen sizes.
+ * 
+ * @param className - Optional additional CSS classes.
+ */
 export const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
     return (
         <aside className={`bg-gradient-to-br from-stone-800 via-stone-700 to-stone-800 text-white 

@@ -5,6 +5,15 @@ import React, { useState } from 'react';
 import InfoCard from './InfoCardItem';
 import infoData from './data/info.json'
 
+/**
+ * Interface for the infocard data structure.
+ * @property id - Unique identifier for the card.
+ * @property title - Title of the card.
+ * @property description - Description or summary of the card.
+ * @property tags - Array of tags/technologies.
+ * @property links - Object containing optional GitHub and website URLs.
+ * @property image - Optional image URL for the card.
+ */
 interface infocard {
   id: string;
   title: string;
@@ -17,6 +26,12 @@ interface infocard {
   image?: string;
 }
 
+/**
+ * CardSection component.
+ * 
+ * Renders a grid of InfoCard components using data from info.json.
+ * Handles hover state to animate and dim cards appropriately.
+ */
 const CardSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
